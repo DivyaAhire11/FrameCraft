@@ -1,6 +1,6 @@
-import java.awt.*; //Frame , FlowLayout
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*; //Frame , FlowLayoutx , Label,Checkbox,Button,TextField
+import java.awt.event.*; // ActionEvent , ActionListener;
+
 
 class SubjectFrame extends Frame implements ActionListener {
     Label l1;
@@ -42,7 +42,6 @@ class SubjectFrame extends Frame implements ActionListener {
         add(tf1);
 
         b1.addActionListener(this);
-
         setVisible(true);
     }
 
@@ -54,7 +53,6 @@ class SubjectFrame extends Frame implements ActionListener {
                 res += cb[i].getLabel();
         }
 
-        System.out.println(res);
         tf1.setText(res);
 
     }
