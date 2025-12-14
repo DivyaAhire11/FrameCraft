@@ -1,11 +1,16 @@
-import javax.swing.*; //JFrame ,JLabel , JCheckBox,JButton,JTextField
-import java.awt.event.*; //ActionListener , ActionEvent
-import java.awt.*; // FlowLayout
+/**
+   java.awt.event
+   Event Class     : ItemEvent
+   Event Listener  : ItemListener( public void itemStateChanged(ItemEvent) )
+ */
 
-class Subject extends JFrame implements ActionListener {
+import javax.swing.*; 
+import java.awt.event.*;
+import java.awt.*;
+
+class Subject extends JFrame implements ItemListener {
     JLabel l1;
     JCheckBox cb[];
-    JButton b1;
     JTextField t1;
 
     Subject() {
@@ -23,32 +28,28 @@ class Subject extends JFrame implements ActionListener {
         cb[3] = new JCheckBox("CPP");
         cb[4] = new JCheckBox("C Language");
 
-        b1 = new JButton("OKK");
         t1 = new JTextField(20);
         t1.setEditable(false);
+      
         // 2. Add Components
         add(l1);
-
-        for (int i = 0; i < cb.length; i++)
-            add(cb[i]);
-
-        add(b1);
+        for (int i = 0; i < cb.length; i++){
+               add(cb[i]);
+               cb[i].addItemListener(this);
+        }
+        
         add(t1);
-
-        // 3. Action Listeners
-        b1.addActionListener(this); // this : current frame
-
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
     }
 
-    public void actionPerformed(ActionEvent ae) {
+    public void itemStateChanged(ItemEvent ae) {
         String res = "";
 
         for (int i = 0; i < cb.length; i++) {
             if (cb[i].isSelected())
-                res += cb[i].getText(); // getLabel()
+                res += cb[i].getText();
         }
 
         t1.setText(res);
@@ -57,7 +58,7 @@ class Subject extends JFrame implements ActionListener {
 
 }
 
-public class TestSubjectSWING {
+public class SubjectSwing1 {
     public static void main(String args[]) {
         new Subject();
     }

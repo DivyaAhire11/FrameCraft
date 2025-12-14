@@ -33,7 +33,7 @@ class Subject extends Frame implements ItemListener{
             cb[i].addItemListener(this);
         }
          add(tf1);
-        setVisible(true);
+         setVisible(true);
     }
     public void  itemStateChanged(ItemEvent ie){
         String res = "";
