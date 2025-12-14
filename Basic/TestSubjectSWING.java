@@ -1,9 +1,8 @@
-//javax : x means extended
 import javax.swing.*; //JFrame ,JLabel , JCheckBox,JButton,JTextField
 import java.awt.event.*; //ActionListener , ActionEvent
 import java.awt.*; // FlowLayout
 
-class Subject extends JFrame implements ActionListener {
+class Subject extends JFrame implements ActionListener{
     JLabel l1;
     JCheckBox cb[];
     JButton b1;
@@ -38,7 +37,7 @@ class Subject extends JFrame implements ActionListener {
 
 
          //3. Action Listeners
-         b1.addActionListener(this);
+         b1.addActionListener(this); //this : current frame
 
          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
@@ -47,12 +46,11 @@ class Subject extends JFrame implements ActionListener {
      public void actionPerformed(ActionEvent ae) {
         String res = "";
 
-        // for (int i = 0; i < cb.length; i++) {
-        //     if (cb[i].getState())
-        //         res += cb[i].getLabel();
-        // }
+        for (int i = 0; i < cb.length; i++) {
+            if (cb[i].isSelected())
+                res += cb[i].getLabel();
+        }
 
-        System.out.println(res);
         t1.setText(res);
 
     }
