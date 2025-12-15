@@ -9,7 +9,7 @@ class TextAreaEx extends Frame {
         setLayout(new FlowLayout());
 
         l1 = new Label("Enter Your FeedBack :");
-        t1 = new TextArea(2,20);
+        t1 = new TextArea(4,20);
 
         add(l1);
         add(t1);
