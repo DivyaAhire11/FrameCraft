@@ -20,7 +20,7 @@ class MyRadioButton extends Frame implements ItemListener{
     TextField t1;
     MyRadioButton(){
          setTitle("Radio Button using AWT");
-         setBounds(200,100,400,400);
+         setBounds(200,100,400,400);  //setLocation() , setSize()
          setLayout(new FlowLayout());
 
          l1 = new Label("Select Your Gender :");

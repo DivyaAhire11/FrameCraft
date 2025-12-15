@@ -3,7 +3,9 @@ Frame            JFrame
 Button           JButton
 TextField        JTextField
 Label            JLabel
-Checkbox         JCheckBox
+Checkbox         JCheckBox(B capital)
+CheckboxGroup    ButtonGroup
+                 JRadioButton
 
 //javax : x means extended
 
@@ -33,4 +35,30 @@ Event Listener  : ActionListener( public void actionPerformed(ActionEvent) )
  Button := Action Listener
  Chechboxes ,RadioButton := Item Listener
 
- 
+ *) ActionEvent      ActionListener     void actionPerformed(ActionEvent)
+ *) ItemEvent      ItemListener     void itemStateChanged(ItemEvent)
+
+
+ void m1(){            //function ,Procedure Oriented
+
+ }
+
+ class A{
+    void m1(){         //method , Object oriented ,
+
+    }
+  }
+
+python , CPP = both allowed 
+
+Object Creation Types 
+Java   :    A ob = new A();
+PYTHON :    ob = A();    //mylist = list() means A ha ek class ahe jyach A() ha constructor ahe like list() pn constructor asel 
+
+import math   //math is a module  : math.pi 
+from math import pi // directly used : pi
+
+Scanner sc = new Scanner(System.in)
+sc.next()       // String read krto : word read
+sc.nextLine()   //Line read krto : single line read(space and \n)
+  
