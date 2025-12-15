@@ -1,3 +1,9 @@
+/**
+ * Changes : Choice  --> JComboBox
+ *           add     --> addItem
+ *           cb.getSelectedItem() --> Object return thats why need to convert into string
+ */
+
 import javax.swing.*;
 import java.awt.FlowLayout;
 import java.awt.event.*;

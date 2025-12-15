@@ -37,7 +37,7 @@ class DropDownList extends Frame implements ItemListener {
     }
 
     public void itemStateChanged(ItemEvent ie) {
-        t1.setText(ch.getSelectedItem());
+        t1.setText(ch.getSelectedItem());  //ch.getSelectedItem()  : return string
     }
 }
 
