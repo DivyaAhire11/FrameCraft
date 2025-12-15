@@ -5,8 +5,11 @@ TextField        JTextField
 Label            JLabel
 Checkbox         JCheckBox(B capital)
 CheckboxGroup    ButtonGroup
-                 JRadioButton
+                  --> JRadioButton
 Choice           JComboBox(drop-down List)
+TextArea         JTextArea
+                  --> JScollSpan
+List             JList( multiple Selection )
 
 //javax : x means extended
 
