@@ -54,6 +54,6 @@ class MyRadioButton extends Frame implements ItemListener{
 
 public class AWTRadioButton {
     public static void main(String args[]){
-        MyRadioButton rb = new MyRadioButton();
+        new MyRadioButton();
     }
 }

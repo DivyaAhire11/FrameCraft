@@ -6,6 +6,7 @@ Label            JLabel
 Checkbox         JCheckBox(B capital)
 CheckboxGroup    ButtonGroup
                  JRadioButton
+Choice           JComboBox(drop-down List)
 
 //javax : x means extended
 
