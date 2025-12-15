@@ -1,5 +1,36 @@
-java.awt    javax.swing
-Frame       JFrame
-Button      JButton
-TextField   JTextField
-Label       JLabel
+java.awt         javax.swing
+Frame            JFrame
+Button           JButton
+TextField        JTextField
+Label            JLabel
+Checkbox         JCheckBox
+
+//javax : x means extended
+
+  AWT                    SWING 
+1.bulky               1.light weight
+2.more memory         2.less memory
+3.no look and         3. look and feel
+   feel  
+4.less componets      4.more components
+5.(4 to 5 listeners)  5. More listeners
+6.Its not Close       6.Its can be Closed
+
+java.awt.event
+Event Class     : ActionEvent
+Event Listener  : ActionListener( public void actionPerformed(ActionEvent) )
+
+
+1.ActionListener
+2.ItemListener
+3.KeyListener
+4.MouseListener
+5.MouseMotionListener
+6.WindowListener
+7.WindowFocusListener
+ 
+
+ Button := Action Listener
+ Chechboxes ,RadioButton := Item Listener
+
+ 
