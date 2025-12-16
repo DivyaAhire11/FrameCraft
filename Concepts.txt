@@ -42,14 +42,14 @@ Event Listener  : ActionListener( public void actionPerformed(ActionEvent) )
  Button := Action Listener
  Chechboxes ,RadioButton := Item Listener
 
- *) ActionEvent      ActionListener     void actionPerformed(ActionEvent)
- *) ItemEvent      ItemListener     void itemStateChanged(ItemEvent)
- *) KeyEvent       KeyListener      3 methods
- *) MouseEvent     MouseListener    5 methods 
- *)                MouseMotionListener   2 methods
+ *) ActionEvent       ActionListener          void actionPerformed(ActionEvent)
+ *) ItemEvent         ItemListener              void itemStateChanged(ItemEvent)
+ *) KeyEvent          KeyListener               3 methods
+ *) MouseEvent        MouseListener             5 methods 
+ *)                   MouseMotionListener       2 methods
 
- *) WindowEvent    WindowListener    7 methods
-                   WindowFocusListener   3 methods
+ *) WindowEvent       WindowListener            7 methods
+                      WindowFocusListener       3 methods
 
     Adapter Classes
     Menu

@@ -6,6 +6,9 @@
         public abstract void keyPressed(KeyEvent);
         public abstract void keyReleased(KeyEvent);
  * Interface : All method of interface must be implemented by iits subclass
+ * 
+ * KeyListener      KeyEvent       addKeyListener   (3 methods)
+ * 
  */
 
 import javax.swing.*;
@@ -38,13 +41,13 @@ public class MyKeyListener extends JFrame implements KeyListener{
         setVisible(true);
     }
     public void keyPressed(KeyEvent k){
-        System.out.println("key Pressed");
+       t2.setText("Key Pressed : "+k.getKeyChar()); //jya Key la pressed kel tyach charecter print
     }
     public void keyTyped(KeyEvent k){
-       System.out.println("key Typed");
+        t3.setText("Key Typed : "+k.getKeyChar());
     }
     public void keyReleased(KeyEvent k){
-        System.out.println("key Released");
+        t4.setText("Key Released : "+k.getKeyChar());
     }
 
     public static void main(String[] args) {
