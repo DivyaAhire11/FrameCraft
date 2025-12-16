@@ -1,3 +1,6 @@
+/**
+ * Bydefault : ScollPane
+ */
 import java.awt.*;
 
 class TextAreaEx extends Frame {
