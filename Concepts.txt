@@ -11,6 +11,9 @@ TextArea         JTextArea
                   --> JScollSpan
 List             JList( multiple Selection )
 
+
+
+
 //javax : x means extended
 
   AWT                    SWING 
@@ -41,7 +44,17 @@ Event Listener  : ActionListener( public void actionPerformed(ActionEvent) )
 
  *) ActionEvent      ActionListener     void actionPerformed(ActionEvent)
  *) ItemEvent      ItemListener     void itemStateChanged(ItemEvent)
+ *) KeyEvent       KeyListener      3 methods
+ *) MouseEvent     MouseListener    5 methods 
+ *)                MouseMotionListener   2 methods
 
+ *) WindowEvent    WindowListener    7 methods
+                   WindowFocusListener   3 methods
+
+    Adapter Classes
+    Menu
+    Layouts
+    JOptionPane(Dialog Boxes) 
 
  void m1(){            //function ,Procedure Oriented
 
@@ -66,3 +79,14 @@ Scanner sc = new Scanner(System.in)
 sc.next()       // String read krto : word read
 sc.nextLine()   //Line read krto : single line read(space and \n)
   
+ItemListener is for:           ActionListener is for:
+
+Checkbox                        Button
+Choice                          JButton
+AWT List                        MenuItem
+CheckBox                        TextField   
+JRadioButton
+JComboBox
+
+
+JList  ::  ListSelectionListener
