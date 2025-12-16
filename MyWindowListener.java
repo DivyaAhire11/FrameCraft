@@ -8,13 +8,13 @@
         *)  void windowActivated(WindowEvent e) : Frame samore yeto (when the window gains focus COMES TO FRONT)
         *)  void windowDeactivated(WindowEvent e) : Frame samore nasto (when window loses focus)
  
- * Sequence must 
+
  * if any one method is not implement then : error ( MyWindowListener is not abstract and does not override abstract method windowClosed(WindowEvent) in WindowListener )
  * RULE : 
  *       subclass of interface must override Or implement all methods of interface IF NOT 
          then you should declared yourself as Abstract 
 
-
+ * Sequence must 
 Sequence :
         Window Activated
         Window Opened
@@ -33,20 +33,53 @@ Sequence :
         Window Closing
         Window DeActivated
         Window Closed
-*/
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+
+* WindowFocusListener :
+*       public void windowGainedFocus(WindowEvent);
+*       public void windowLostFocus(WindowEvent);
+*
+Sequence :  
+    WINDOW OPEN      
+            Window Activated
+            Focus Gain
+            Window Opened
+   
+    ACTIVATE :
+            Focus Lost
+            Window DeActivated
+                    
+            Window Activated
+            Focus Gain
+        
+    MINIMIZE:
+            Window Iconified
+            Focus Lost
+            Window DeActivated
+    MAXIMIZE :
+            Window Deiconified
+            Window Activated
+            Focus Gain
+    CLOSE WINDOW:
+            Window Closing
+            Focus Lost
+            Window DeActivated
+            Window Closed
+        */
 
 import java.awt.*;
 import java.awt.event.*; //WindowEvent , WindowListener
 
 
-public class MyWindowListener extends Frame implements WindowListener{
+public class MyWindowListener extends Frame implements WindowListener,WindowFocusListener{
 
     MyWindowListener(){
         setTitle(" Window Listener Example");
         setBounds(150, 200, 400, 300);
        
         addWindowListener(this);
-
+        addWindowFocusListener(this);
 
         setVisible(true);
     }
@@ -72,6 +105,15 @@ public class MyWindowListener extends Frame implements WindowListener{
     public void windowDeactivated(WindowEvent w){
         System.out.println("Window DeActivated");
     }
+    //--------------------------------------------------------------
+
+    public void windowGainedFocus(WindowEvent e){
+        System.out.println("Focus Gain");
+    }
+    public void windowLostFocus(WindowEvent e){
+        System.out.println("Focus Lost");
+    }
+
 
     public static void main(String[] args) {
         new MyWindowListener();
