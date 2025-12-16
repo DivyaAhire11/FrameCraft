@@ -1,6 +1,7 @@
 /**
  * Not Default : Scrollpane
  * Used ScrollPane using : JScrollPane
+ * Don't add TextArea add Panel
  */
 
 import javax.swing.*;
