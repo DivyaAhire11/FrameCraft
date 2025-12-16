@@ -2,9 +2,9 @@
 /**
  * Aadhi components vr listener lavl aata Frame vr Listener lau 
  * KEY LISTENER
-        public abstract void keyTyped(KeyEvent);
-        public abstract void keyPressed(KeyEvent);
-        public abstract void keyReleased(KeyEvent);
+        public abstract void keyTyped(KeyEvent);    (2)
+        public abstract void keyPressed(KeyEvent);  (1)
+        public abstract void keyReleased(KeyEvent); (3)
  * Interface : All method of interface must be implemented by iits subclass
  * 
  * KeyListener      KeyEvent       addKeyListener   (3 methods)
