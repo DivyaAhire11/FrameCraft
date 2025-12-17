@@ -80,3 +80,106 @@ Java Listeners
                     void mouseMoved(MouseEvent e)
  -------------------------------------------------------
 
+AWT
+*) Frame (Main Window)
+       🪟 Basic window (OS-dependent)
+
+*)Choice (Dropdown)
+      [ Java ▼ ]
+
+*) TextArea
+     |              |
+     |              |
+     |              |
+
+
+*) List
+    C
+    C++
+    Java
+
+
+SWING 
+
+*) JFrame (Main Window) 
+     🪟 A normal application window with a title bar
+
+*) JButton (Button)
+     [ Click Me ]
+
+*) JLabel (Text Display)
+    Hello Java
+
+*) JTextField (Text Box)
+    [______________]
+
+*) JCheckBox (Checkbox)
+   ☐ Accept
+
+*) JRadioButton (Radio Button)
+   ◯ Male
+   ◯ Female
+
+*) JComboBox (Dropdown)
+    [ Java ▼ ]
+
+
+| AWT                | Swing                |
+| ------------------ | -------------------- |
+| Heavyweight        | Lightweight          |
+| OS-dependent look  | Same look everywhere |
+| Faster but limited | More components      |
+
+======================================================================================
+
+* What is a Layout Manager in Java?
+    A Layout Manager controls how components (buttons, labels, text fields, etc.) are arranged inside a container (Frame, Panel, JFrame, JPanel).
+
+    Java uses layout managers to make GUIs platform-independent and responsive.
+
+🔹 Why Use Layout Managers?
+
+    *)Automatically adjust component size & position
+    *)Platform independent
+    *)Resizable window support
+    *)Clean and maintainable GUI design
+
+---------------------------------------------------------
+1️⃣ FlowLayout
+     1.Default layout for JPanel
+     2.Components arranged left to right
+     3.Wraps to next line if space is insufficient
+
+--------------------------------------------------------
+
+2️⃣ BorderLayout
+    1.Default layout for JFrame
+    2.NORTH , SOUTH ,EAST,WEST,CENTER
+
+--------------------------------------------------------
+
+3️⃣ GridLayout
+   1.Components in rows and columns
+   2.All components have equal size
+   3.Use Case: Calculator, dashboards
+
+--------------------------------------------------------
+
+4️⃣ CardLayout
+   1.Multiple components, one visible at a time
+   2.Works like cards
+   3.Use Case: Login screens, step-by-step forms
+
+--------------------------------------------------------
+
+5️⃣ GridBagLayout (Advanced)
+   1.Most flexible and complex
+   2.Components can span multiple rows/columns
+
+--------------------------------------------------------
+
+6️⃣ Null Layout (Not Recommended)
+   1.Absolute positioning using setBounds()
+   2.No automatic resizing
+
+
