@@ -90,3 +90,34 @@ JComboBox
 
 
 JList  ::  ListSelectionListener
+
+
+SEQUENCE :
+KeyListener : (1.Pressed   2.Typed   3.Released )
+MouseListener : (1.Pressed   2.Released   3.Clicked )
+MouseMotionListener : (1.moved  1.Pressed   2.Dragged 3.Released)
+WindowListener : (1.Activated   2.Opened)
+                 (3.Iconified = minimize   4.DeActivated)
+                 (5.Deiconified = maximize  6.Activated)
+                 (7.Closing   8.DeActivated  9.Closed )
+ 
+        *1. Activated   
+        *2. Opened
+        *3. Closing
+        *4. DeActivated
+        *5. Closed
+
+  After WindowFocusListener :
+        1.Activated           1.Iconified         1.Deiconified       1.Activated (Alt+tab = focus gain,loss)     
+        2.Gained Focus        2.Lost Focus        2.Activated         2.Gained Focus   
+        3.Opened              3.DeActivated       3.Gain Focus        3.Lost Focus   
+                                                                      4.DeActivated  
+
+        *1. ACtivate                                             
+        *2. Gain Focus           
+        *3. Opened  
+        --------------       
+        *4. Closing
+        *5. Lost Focus
+        *6. DeActivated
+        *7. Closed                           

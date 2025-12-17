@@ -25,7 +25,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class MyMouselistener extends JFrame implements MouseListener, MouseMotionListener {
+public class MyMouselistener extends JFrame implements MouseListener, MouseMotionListener { // Mutiple inheritance
 
     MyMouselistener() {
         setTitle(" Mouse Listener Example");
@@ -60,11 +60,11 @@ public class MyMouselistener extends JFrame implements MouseListener, MouseMotio
     }
 
     public void mouseDragged(MouseEvent me) {
-        System.out.println("Mouse Dragged "); // press+move
+        System.out.println("Mouse Dragged :: "+ me.getX() + " : " + me.getY()); // press+move
     }
 
     public void mouseMoved(MouseEvent me) {
-        System.out.println("Mouse Moved ");
+        System.out.println("Mouse Moved :: "+ me.getX() + " : " + me.getY());
     }
 
     public static void main(String[] args) {

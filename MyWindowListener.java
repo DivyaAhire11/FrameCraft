@@ -1,5 +1,5 @@
 /**
- * Window Listener :
+ * Window Listener : 7 methods
         *)  void windowOpened(WindowEvent e) : when the window is opened for the first time
         *)  void windowClosing(WindowEvent e) : when the user clicks the close(X) button on window
         *)  void windowClosed(WindowEvent e)  : After the window is completely closed
@@ -12,7 +12,7 @@
  * if any one method is not implement then : error ( MyWindowListener is not abstract and does not override abstract method windowClosed(WindowEvent) in WindowListener )
  * RULE : 
  *       subclass of interface must override Or implement all methods of interface IF NOT 
-         then you should declared yourself as Abstract 
+         then you should declared yourself as abstract 
 
  * Sequence must 
 Sequence :
@@ -69,7 +69,7 @@ Sequence :
         */
 
 import java.awt.*;
-import java.awt.event.*; //WindowEvent , WindowListener
+import java.awt.event.*; //WindowEvent , WindowListener , WindowFocusListener
 
 
 public class MyWindowListener extends Frame implements WindowListener,WindowFocusListener{
@@ -78,12 +78,12 @@ public class MyWindowListener extends Frame implements WindowListener,WindowFocu
         setTitle(" Window Listener Example");
         setBounds(150, 200, 400, 300);
        
-        addWindowListener(this);
+        addWindowListener(this);  //listener add krnyasathi method
         addWindowFocusListener(this);
 
         setVisible(true);
     }
-    public void windowOpened(WindowEvent w){
+    public void windowOpened(WindowEvent w){   //listener chya methods
         System.out.println("Window Opened");
     }
     public void windowClosing(WindowEvent w){
