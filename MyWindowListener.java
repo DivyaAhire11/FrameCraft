@@ -14,6 +14,8 @@
  *       subclass of interface must override Or implement all methods of interface IF NOT 
          then you should declared yourself as abstract 
 
+         All methods Of Interface implemented hya Public havya
+
  * Sequence must 
 Sequence :
         Window Activated

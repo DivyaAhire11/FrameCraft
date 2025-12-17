@@ -121,3 +121,10 @@ WindowListener : (1.Activated   2.Opened)
         *5. Lost Focus
         *6. DeActivated
         *7. Closed                           
+
+  INTERFACE          CLASS
+  KeyListener    =  KeyAdaptor
+  WindowListener =  WindowAdaptor
+  MouseListener  =  MouseAdaptor
+
+  
