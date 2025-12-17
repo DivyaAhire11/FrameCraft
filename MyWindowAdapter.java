@@ -22,9 +22,6 @@
          *) public void windowGainedFocus(WindowEvent);
          *) public void windowLostFocus(WindowEvent);
   
- */
-
-/*
 
 interface WindowListener {
     void windowOpened(WindowEvent);
@@ -47,3 +44,36 @@ class WindowAdapter implements WindowListener {
     }
 
  */
+
+// According to multiple inheritance we can't extends multiple classes
+// According to multiple inheritance we can implements multiple interfaces
+
+//Adapter class has already implemented all listeners method , by which we can use any one method of listener.
+
+import java.awt.*;
+import java.awt.event.*;
+
+class MyWindowAdapter extends WindowAdapter{
+    Frame f;  //HAS-A RelationShip
+
+    MyWindowAdapter(){
+        f = new Frame();
+        f.setTitle("Adaptor Class Example");
+        f.setBounds(200,200,400,200);
+        
+
+        f.addWindowListener(this);
+
+
+        f.setVisible(true);
+    }
+
+    public void windowClosing(WindowEvent w){
+        System.out.println("Window Closing");
+        f.dispose();
+    }
+
+    public static void main(String[] args) {
+        new MyWindowAdapter();
+    }
+}
