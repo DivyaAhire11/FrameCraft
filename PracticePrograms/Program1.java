@@ -22,5 +22,7 @@ public class Program1 {
         int age = Integer.parseInt(JOptionPane.showInputDialog("Enter Your Age : "));
         JOptionPane.showMessageDialog(null, "Your Age is :"+age);
     
+        Double height = Double.parseDouble(JOptionPane.showInputDialog("Enter Your Height :"));
+        JOptionPane.showMessageDialog(null, "You are "+height+"cm tall");
     }
 }
