@@ -1,0 +1,7 @@
+Types of Dialogs in JOptionPane
+
+-->showMessageDialog()           :  Display message
+-->showInputDialog()             :  Take input from user
+-->showConfirmDialog()           :  Yes / No /Cancle
+-->showOptionDialog()            :  Custom options
+-->showInternalMessageDialog()   :  Used inside (JDesktopPane)
