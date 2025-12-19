@@ -1,3 +1,4 @@
+package GUISwing;
 /**
  *  JOptionPane.showMessageDialog(null, "Hello "+name);
        null : parentComponent
@@ -14,7 +15,7 @@
  * 
  */
 import javax.swing.JOptionPane;
-public class Program1 {
+public class MyJOptionPane {
     public static void main(String args[]){
         String name = JOptionPane.showInputDialog("Enter Your name");
         JOptionPane.showMessageDialog(null, "Hello "+name);
