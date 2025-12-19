@@ -18,11 +18,17 @@
                 l1.setFont(f);
 
  * javax.swing.BorderFactory
+
+//Q. How to apply underline in Swing text?
+--->Using TextAttribute.UNDERLINE with Font.deriveFont() method      
  */
 package GUI;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.awt.font.TextAttribute;
+import java.util.HashMap;
+import java.util.Map;
 
 class FontFrame extends JFrame implements ItemListener{
     JPanel main,bottom,left,right;
@@ -109,12 +115,49 @@ class FontFrame extends JFrame implements ItemListener{
     }
     
     public void itemStateChanged(ItemEvent e){
-       
-       
-        // String fname = (String)cb1.getSelectedItem();
-        // int size = Integer.parseInt(cb2.getSelectedItem());
-    }
+         String fontName = (String)cb1.getSelectedItem();
+         int fontsize = Integer.parseInt((String)cb2.getSelectedItem());
+    
+        int style = Font.PLAIN;
+    
+        if(b1.isSelected()){
+            style = style | Font.BOLD;
+        }
+        if(b2.isSelected()){
+            style = style | Font.ITALIC;
+        }
+    
+        Font f = new Font(fontName,style,fontsize);
+        //Font class does NOT SUPPORT UNDERLINE DIRECTLY
+        //Underline is a text attribute,not a font style
+        
+
+        if(b3.isSelected()){
+            Map<TextAttribute,Object> att = new HashMap(); //Creating a Map (key → value) 
+            att.put(TextAttribute.FONT,f);
+            att.put(TextAttribute.UNDERLINE,TextAttribute.UNDERLINE_ON);
+            f = f.deriveFont(att);
+        }
+    
+    
+         tf.setFont(f);
+    
+    
+        }
     public static void main(String[] args) {
         new FontFrame();
     }
 }
+
+/*
+Font
+  |
+  +-- BOLD, ITALIC (Font constants)
+  |
+  +-- UNDERLINE → TextAttribute
+                  |
+                  +-- Map
+                        |
+                        +-- deriveFont()
+
+*/
