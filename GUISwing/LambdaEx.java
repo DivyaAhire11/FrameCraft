@@ -5,14 +5,20 @@ package GUISwing;
       //also known as an anonymous method 
       // a shorter way to write anonymous classes with only one method
       //need to use a functional interface or use a pre-defined functional interface
-      //they contain only one abstrct method
+      //functional interface they contain only one abstrct method
       //eg: ActionListener,Runnable,(user-defined)
       
       //a Lambda expression can be used in any place where a functional interface
-      //How to use lambda expression:
-      //    (argument) -> (statement/s) : -> lambda operator
+      //How to use lambda expression:: -> lambda operator
+      //    (argument) -> (statement/s) 
  
-         
+   /**
+    * when we used () -> { s.o.p(''); };   then we use semicolon to s.o.p and outer
+    * 
+    * button.addActionListener(
+            (e) -> System.out.println("You Click Button")  //here we not used semicolon
+         );  
+    *  */      
 class LambdaExpression {
     public static void main(String[] args) {
       //    MyInterface ob = (x,y) -> {
@@ -21,8 +27,10 @@ class LambdaExpression {
       //   };
 
       //   MyInterface ob2 = (a,b) ->{
-      //      System.out.println("Thank You "+a+b);
+      //      System.out.println("Thank You "+a+b);  
       //   };
+        MyInterface ob2 = (a,b) -> System.out.println("Thank You "+a+b);
+        ob2.message("Ritu",'!');
 
       //    ob.message("Ritu",'!');
       //    ob2.message("Divya", '!');
