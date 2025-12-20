@@ -15,16 +15,19 @@ package GUISwing;
          
 class LambdaExpression {
     public static void main(String[] args) {
-         MyInterface ob = (x,y) -> {
-            System.out.println("Hello "+x+y);
-            System.out.println("Good Day"); 
-        };
+      //    MyInterface ob = (x,y) -> {
+      //       System.out.println("Hello "+x+y);
+      //       System.out.println("Good Day"); 
+      //   };
 
-        MyInterface ob2 = (a,b) ->{
-           System.out.println("Thank You "+a+b);
-        };
+      //   MyInterface ob2 = (a,b) ->{
+      //      System.out.println("Thank You "+a+b);
+      //   };
 
-         ob.message("Ritu",'!');
-         ob2.message("Divya", '!');
-        }
+      //    ob.message("Ritu",'!');
+      //    ob2.message("Divya", '!');
+      //   }
+
+        LambdaEx2 lEx2 = new LambdaEx2();
+}
 }
