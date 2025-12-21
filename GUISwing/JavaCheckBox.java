@@ -1,8 +1,8 @@
 package GUISwing;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
+import javax.swing.*; //ImageIcon ,  JButton , JCheckBox , JFrame
+import java.awt.*; //FlowLayout , Font 
+import java.awt.event.*; //ItemListener , ItemEvent
 
 public class JavaCheckBox extends JFrame implements ItemListener {
     JCheckBox cb;
@@ -23,6 +23,8 @@ public class JavaCheckBox extends JFrame implements ItemListener {
         icon2 = new ImageIcon("crossMark.png");
 
         cb.setIcon(icon);
+        // cb.setSelectedIcon(icon2);
+
         cb.addItemListener(this);
 
         add(cb);
