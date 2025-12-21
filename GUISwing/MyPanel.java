@@ -12,7 +12,7 @@ public class MyPanel extends JFrame {
         ImageIcon afraidimg = new ImageIcon(
                 new ImageIcon("wow.png").getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH));
 
-        setTitle("All About TextField");
+        setTitle("All About Panel");
         l = new JLabel(afraidimg); // l.setIcon(img)
         //l.setText("hello");
        // l.setVerticalAlignment(JLabel.BOTTOM); // no need when we no used any layout
